@@ -30,14 +30,16 @@
             cursor: pointer;
         }
         img {
-            max-width: 75%; /* Diminuindo a largura da imagem da equipe em 25% */
             height: auto;
             border-radius: 8px;
             display: block;
             margin: 0 auto; /* Centraliza a imagem */
         }
+        .team-img {
+            max-width: 56.25%; /* Diminuindo a largura da imagem da equipe em 25% */
+        }
         .small-img {
-            width: 50px; /* Tamanho pequeno para a imagem luiz.jpg */
+            width: 75px; /* Aumentando a largura da imagem luiz.jpg */
             height: auto;
             position: absolute; /* Posiciona a imagem no canto superior direito */
             top: 20px;
@@ -52,7 +54,7 @@
                 padding: 10px; /* Ajusta o padding dos slides */
             }
             .small-img {
-                width: 40px; /* Ajusta o tamanho da imagem em telas pequenas */
+                width: 60px; /* Ajusta o tamanho da imagem em telas pequenas */
                 top: 10px; /* Ajusta a posição em telas pequenas */
                 right: 10px;
             }
@@ -63,12 +65,12 @@
 
     <div class="slide active">
         <h1>Equipe</h1>
-        <img src="equipe.jpg" alt="Foto da Equipe">
+        <img src="equipe.jpg" alt="Foto da Equipe" class="team-img"> <!-- Classe para imagem da equipe -->
     </div>
 
     <div class="slide">
         <h1>Introdução à Ferramenta</h1>
-        <img src="luiz.jpg" alt="luiz.jpg" class="small-img"> <!-- Imagem no canto superior direito -->
+        <img src="luiz.jpg" alt="Foto do Luiz" class="small-img"> <!-- Imagem no canto superior direito -->
         <p>O Insomnia é uma ferramenta de teste de APIs que permite enviar requisições HTTP de forma intuitiva.</p>
     </div>
 
