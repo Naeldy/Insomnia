@@ -26,12 +26,34 @@
             margin: 10px;
             padding: 10px;
             font-size: 16px;
+            cursor: pointer;
+        }
+        img {
+            max-width: 75%; /* Diminuindo a largura da imagem em 25% */
+            height: auto;
+            border-radius: 8px;
+            display: block;
+            margin: 0 auto; /* Centraliza a imagem */
+        }
+        @media (max-width: 600px) {
+            button {
+                font-size: 14px; /* Reduz o tamanho da fonte dos botões em telas pequenas */
+                padding: 8px; /* Ajusta o padding dos botões */
+            }
+            .slide {
+                padding: 10px; /* Ajusta o padding dos slides */
+            }
         }
     </style>
 </head>
 <body>
 
     <div class="slide active">
+        <h1>Equipe</h1>
+        <img src="equipe.jpg" alt="Foto da Equipe">
+    </div>
+
+    <div class="slide">
         <h1>Introdução à Ferramenta</h1>
         <p>O Insomnia é uma ferramenta de teste de APIs que permite enviar requisições HTTP de forma intuitiva.</p>
     </div>
