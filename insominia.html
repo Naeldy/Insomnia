@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apresentação sobre Insomnia</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        .slide {
+            display: none;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            margin: 20px 0;
+        }
+        .active {
+            display: block;
+        }
+        button {
+            margin: 10px;
+            padding: 10px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="slide active">
+        <h1>Introdução à Ferramenta</h1>
+        <p>O Insomnia é uma ferramenta de teste de APIs que permite enviar requisições HTTP de forma intuitiva.</p>
+    </div>
+
+    <div class="slide">
+        <h1>Contexto de Uso</h1>
+        <p>Desenvolvedores utilizam o Insomnia para testar e depurar APIs durante o desenvolvimento de software.</p>
+    </div>
+
+    <div class="slide">
+        <h1>Principais Funcionalidades</h1>
+        <ul>
+            <li>Envio de requisições HTTP (GET, POST, etc.)</li>
+            <li>Organização de requisições em pastas</li>
+            <li>Suporte a variáveis de ambiente</li>
+            <li>Visualização de respostas em diferentes formatos</li>
+        </ul>
+    </div>
+
+    <div class="slide">
+        <h1>Pontos Fortes e Limitações</h1>
+        <h3>Pontos Fortes:</h3>
+        <ul>
+            <li>Interface intuitiva</li>
+            <li>Facilidade de uso</li>
+            <li>Suporte a autenticação</li>
+        </ul>
+        <h3>Limitações:</h3>
+        <ul>
+            <li>Recursos limitados em comparação a ferramentas mais complexas</li>
+        </ul>
+    </div>
+
+    <div class="slide">
+        <h1>Casos de Uso</h1>
+        <p>Ideal para desenvolvedores que precisam testar APIs durante o ciclo de desenvolvimento, realizar integração contínua e colaborar em equipes.</p>
+    </div>
+
+    <div class="slide">
+        <h1>Conclusões</h1>
+        <p>O Insomnia é uma ferramenta essencial para garantir a qualidade de APIs, facilitando o teste e a depuração.</p>
+    </div>
+
+    <div class="slide">
+        <h1>Recomendações</h1>
+        <p>Recomenda-se o uso do Insomnia em projetos de API para melhorar a eficiência no desenvolvimento e a colaboração entre equipes.</p>
+    </div>
+
+    <button onclick="prevSlide()">Anterior</button>
+    <button onclick="nextSlide()">Próximo</button>
+
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.classList.toggle('active', i === index);
+            });
+        }
+
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % slides.length;
+            showSlide(currentSlide);
+        }
+
+        function prevSlide() {
+            currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+            showSlide(currentSlide);
+        }
+    </script>
+
+</body>
+</html>
